@@ -2,7 +2,7 @@ import { throttle, times, update } from 'lodash';
 
 const STORAGE_KEY_FEEDBACK = 'feedback-form-state';
 
-const dataObj = {};
+const dataObj = localStorage.getItem(STORAGE_KEY_FEEDBACK) ? JSON.parse(localStorage.getItem(STORAGE_KEY_FEEDBACK)) : {}
 
 const formEl = document.querySelector('.feedback-form');
 const inputEl = document.querySelector("input");
